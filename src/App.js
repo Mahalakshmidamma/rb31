@@ -7,6 +7,7 @@ function App() {
     <div className="App">
     <h1>Welcome to Reactapp</h1>
     <Counter></Counter>
+    <h1>Maha</h1>
     </div>
   );
 }
