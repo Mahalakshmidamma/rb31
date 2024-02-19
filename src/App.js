@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import Taj from './Todolist';
+import Todolist from './todolist';
 
 function App() {
   return (
     <div className="App">
     <h1>Welcome to Reactapp</h1>
-    <Taj></Taj>
+    <Todolist></Todolist>
     </div>
   );
 }
