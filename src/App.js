@@ -6,6 +6,7 @@ import Todolist from './todolist';
 function App() {
   return (
     <div className="App">
+      <h1>Welcome to React</h1>
       <Counter></Counter>
       <Todolist></Todolist>
     </div>
