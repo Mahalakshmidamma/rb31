@@ -11,17 +11,21 @@ function Todolist() {
         var temp=[...arr]
         temp.splice(ind,1)
         setArr([...temp])
-    }
+    } 
     return (
         <div className="mainBody">
             <h1>TODOLIST</h1>
             <input type="text" id="d1" />
             <button onClick={abc}>ADD HERE</button>
+
             {
                 arr.map((a,index)=> {
                     return (
                     <li>{a}
                     <button onClick={()=>{del(index)}}>DELETE</button>
+                    <button>DONE</button>
+                    <button>UNDO</button>
+
                     </li>
                     )
                 })
