@@ -31,10 +31,15 @@ function Cart(){
           })
           setCart([...temp])
         }
+        function del(ind){
+          var temp=[...cart];
+          temp.splice(ind,1)
+          setCart([...temp])
+        }
         return (
         
                <div className="mybox">
-                  <h1 style={{textAlign:"center"}}>Cart</h1>
+                  <h1 style={{textAlign:"center"}}>Shopping Cart</h1>
                   {
                     loading && (<div class="spinner-border" role="status">
                                   <span class="visually-hidden">Loading...</span>
@@ -42,7 +47,7 @@ function Cart(){
                   }
                   <ul className="cartList">
                   {
-                    cart?.map((item)=>{
+                    cart?.map((item,index)=>{
                        return <li className="cartItem">
                                   <img src={item.thumbnail} alt=""/>
                                  <b class="itemTitle">{item.title}</b>
@@ -55,9 +60,17 @@ function Cart(){
                                   <div>
                                     <b className="itemTotal">Rs.{item.price*item.quantity}</b>
                                   </div>
-                                </li>
+                  
+                                  <div class="del">
+                                  <button onClick={()=>{del(index)}}>DELETE</button>
+                                  </div>
+                                  </li>
+                               
+                                
+                               
                     })
                   }
+                  
                   <h1 className="cartTotal">Total:{cart?.reduce((sum,item)=>{
                          return sum+(item.quantity*item.price)
                   },0)}</h1>

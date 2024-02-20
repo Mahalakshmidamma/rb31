@@ -23,7 +23,7 @@ list-style: none;
   width:40%;
 }
 .cartItem button{
-  border-radius:50%;
+  border-radius:40%;
   margin:10px;
   background-color: pink;
 }
@@ -34,8 +34,14 @@ list-style: none;
 .itemTotal{
   width:10%;
   text-align:right;
+  padding: 50px;
 }
 .cartTotal{
   text-align:right;
   width:69%
+}
+.del button{
+  border-radius:0px;
+  background-color:red;
+
 }
