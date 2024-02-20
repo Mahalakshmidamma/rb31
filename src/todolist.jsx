@@ -8,7 +8,7 @@ function Todolist() {
         setArr([...arr, document.getElementById("d1").value])
     }
     return (
-        <div>
+        <div className="mainBody">
             <h1>TODOLIST</h1>
             <input type="text" id="d1" />
             <button onClick={abc}>ADD HERE</button>
