@@ -1,17 +1,21 @@
 import React from "react";
 
-function Todo({todo,index,del}){
-    console.log("todos")
+function Todo({todo,index,del,done,undo,edit}){
+    // console.log("Todo")
     return (
         <div className="listDiv">
-            <li style={{textDecoration:todo.stats?"line-through":"none"}}>
-                {/* <div className="eachDiv"> */}
-                    {todo.task} 
-                    <button onClick={()=>(del(index))}>Delete</button>
+            
+                  <li style={{textDecoration:todo.stats?"line-through":"none"}}>
+                
+                  {todo.task} 
 
-                {/* </div> */}
+                  <button onClick={()=>(del(index))}>Delete</button>
+                  <button onClick={()=>(done(index))}>Done</button>
+                  <button onClick={()=>(undo(index))}>Undo</button>
+                  <button onClick={()=>(edit(index))}>Edit</button> 
 
-            </li>
+          </li>
+            
 
         </div>
     )

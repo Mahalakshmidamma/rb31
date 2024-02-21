@@ -1,1 +1,21 @@
 
+  .mainbody{
+    text-align: center;
+    border:2px solid;
+    border-radius: 25px;
+    margin:20px;
+    padding: 10px;
+    background-color: rgb(138, 131, 145);
+  }
+  .eachDiv{
+    color: blue;
+  }
+  .listDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  
+
+
