@@ -1,12 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import Todolist from "./todolist"
 
-function App() {
+function App(){
   return (
-    <div className="App">
-    <h1>Welcome to Reactapp</h1>
+    <div>
+      <h1>Welcome to To-Do List</h1>
+      <Todolist></Todolist>
     </div>
-  );
+  )
 }
 
 export default App;
