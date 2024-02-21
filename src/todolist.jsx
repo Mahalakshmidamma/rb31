@@ -1,16 +1,16 @@
 import React from "react";
 
 function Todolist() {
-    var [arr, setArr] = React.useState(["omega", "alpha", "beta"])
+    var [todos, setTodos] = React.useState(["omega", "alpha", "beta"])
     function abc() {
         // var k = document.getElementById("d1").value
-        console.log(arr)
-        setArr([...arr, document.getElementById("d1").value])
+        console.log(todos)
+        setTodos([...todos, document.getElementById("d1").value])
     }
     function del(ind){
-        var temp=[...arr]
+        var temp=[...todos]
         temp.splice(ind,1)
-        setArr([...temp])
+        setTodos([...temp])
     } 
     return (
         <div className="mainBody">
@@ -19,15 +19,17 @@ function Todolist() {
             <button onClick={abc}>ADD HERE</button>
 
             {
-                arr.map((a,index)=> {
+                todos.map((todo,index)=> {
                     return (
-                    <li>{a}
-                    <button onClick={()=>{del(index)}}>DELETE</button>
-                    <button>DONE</button>
-                    <button>UNDO</button>
+                        <li>
+                            {todo}
+                            <button onClick={()=>{del(index)}}>DELETE</button>
+                             <button>DONE</button>
+                             <button>UNDO</button>
 
-                    </li>
+             </li>
                     )
+                   
                 })
             }
         </div>
