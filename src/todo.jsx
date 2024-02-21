@@ -5,11 +5,11 @@ function Todo({todo,index,del}){
     return (
         <div className="listDiv">
             <li style={{textDecoration:todo.stats?"line-through":"none"}}>
-                <div className="eachDiv">
-                    {todo.task}
+                {/* <div className="eachDiv"> */}
+                    {todo.task} 
                     <button onClick={()=>(del(index))}>Delete</button>
 
-                </div>
+                {/* </div> */}
 
             </li>
 
