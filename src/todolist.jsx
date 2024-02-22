@@ -1,19 +1,32 @@
 import React from "react"
+import Todo from './todo';
+
 function Todolist(){
     var[todos,setTodos]=React.useState(["hey","oye"])
-    return(
+
+    // console.log("todolist")
+    var ar=React.useMemo(()=>{return [12,23,34]},[]);
+      function addTodo(){
+        setTodos([...todos,document.getElementById("d1").value])
+      }
+       var del=React.useCallback((ind)=>{
+        var temp=[...todos]
+        temp.splice(ind,1)
+        setTodos([...temp])
+      },[])
+
+    return (
         <div className="mybox">
             <h1>TODOLIST</h1>
             <input type="text" id="d1"/>
-            <button>Add todo</button>
+            <button onClick={()=>{addTodo()}}>Add todo</button>
             {
-                todos.map((todo)=>{
-                    return (
-                        <li>{todo}</li>
-                    )
+                todos.map((todo,i)=>{
+                    return <todo todo={todo} ar={ar} index={i} del={del}></todo>
+                    
                 })
             }
         </div>
     )
 }
-export default Todolist
+export default React.memo(Todolist)

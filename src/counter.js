@@ -55,6 +55,8 @@ function Counter(){
         //     console.log("happy")
         // })
       
+        // console.log("counter")
+
       return(
            <div className="mybox">
                  <h1>Counter:{c}</h1>
@@ -71,4 +73,4 @@ function Counter(){
       )
     }
 
-    export default Counter
+    export default React.memo(Counter)
