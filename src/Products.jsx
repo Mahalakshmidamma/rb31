@@ -14,7 +14,7 @@ function Products(){
     return (
         <div>
             <h1>PRODUCTS</h1>
-            <div className="d-flex flex-wrap w-75 ">
+            <div className="d-flex flex-wrap w-75">
                  {
                 products?.map((product)=>{
                     return (
