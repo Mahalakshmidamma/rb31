@@ -2,7 +2,6 @@ import logo from './logo.svg';
 import './App.css';
 import Products from "./Products"
 import React from 'react'
-import axios from 'axios'
 
 function App() {
   return (

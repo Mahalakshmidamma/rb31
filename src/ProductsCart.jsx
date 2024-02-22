@@ -1,9 +1,22 @@
 import React from 'react'
 
-function ProductsCart(){
+const ProductsCart=({CartItems})=>{
     return (
         <div>
-            <h1>ProductsCart</h1>
+            <i className='bi bi-cart4 cartShape'></i>
+            <ul>
+                <h1>welcome to cart</h1>
+                {
+                    CartItems?.map((item)=>{
+                        return (
+                            <li>{item.title}</li>
+                        )
+                    })
+                }
+            </ul>
+            {
+              CartItems.length===0 &&<h3>Cart Empty</h3>
+            }
         </div>
     )
 }
