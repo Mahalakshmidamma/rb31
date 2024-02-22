@@ -31,8 +31,8 @@ function Todolist(){
           temp[ind].stats=false;
           setTodos([...temp])
     }
-    function edit(){
-        
+    function edit(ind){
+        var temp=[...todos]
     }
 
     return (
@@ -47,8 +47,8 @@ function Todolist(){
                 </div> */}
             </div>
             <div>
-                <input type="text" id="i1"/>
-                <button onClick={()=>{addTodo()}}>ADD</button>
+                <input className=" btn-sm" type="text" id="i1"/>
+                <button className="btn btn-success m-2" onClick={()=>{addTodo()}}>ADD</button>
             </div>
               {
                 todos.map((todo,index)=>{
