@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios"
+import CartItem from "./Cartitem";
 function Cart(){
     var [cart,setCart]=React.useState([])
     var [loading,setLoading]=React.useState(0)
@@ -48,23 +49,24 @@ function Cart(){
                   <ul className="cartList">
                   {
                     cart?.map((item,index)=>{
-                       return <li className="cartItem">
-                                  <img src={item.thumbnail} alt=""/>
-                                 <b class="itemTitle">{item.title}</b>
-                                 <b class="itemPrice">Price:Rs.{item.price}</b>
-                                 <div>
-                                  <button onClick={()=>{incQun(item)}}>+</button>
-                                  <b>{item.quantity}</b>
-                                  <button onClick={()=>{decQun(item)}}>-</button>
-                                  </div> 
-                                  <div>
-                                    <b className="itemTotal">Rs.{item.price*item.quantity}</b>
-                                  </div>
+                      //  return <li className="cartItem">
+                      //             <img src={item.thumbnail} alt=""/>
+                      //            <b class="itemTitle">{item.title}</b>
+                      //            <b class="itemPrice">Price:Rs.{item.price}</b>
+                      //            <div>
+                      //           <button onClick={()=>{incQun(item)}}>+</button>
+                      //             <b>{item.quantity}</b>
+                      //             <button onClick={()=>{decQun(item)}}>-</button>
+                      //             </div> 
+                      //             <div>
+                      //               <b className="itemTotal">Rs.{item.price*item.quantity}</b>
+                      //             </div>
                   
-                                  <div class="del">
-                                  <button onClick={()=>{del(index)}}>DELETE</button>
-                                  </div>
-                                  </li>
+                      //             <div class="del">
+                      //             <button onClick={()=>{del(index)}}>DELETE</button>
+                      //             </div>
+                      //             </li>
+                  return <CartItem item={item} index={index} incQun={incQun} decQun={decQun} del={del} ></CartItem>
                                
                                 
                                
