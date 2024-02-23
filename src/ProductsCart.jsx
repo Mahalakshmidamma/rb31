@@ -3,13 +3,15 @@ import React from 'react'
 const ProductsCart=({CartItems})=>{
     return (
         <div>
-            <i className='bi bi-cart4 cartShape'></i>
+            <h1>welcome to cart</h1>
+            {/* <i className='bi bi-cart4 cartShape'></i> */}
             <ul>
-                <h1>welcome to cart</h1>
+                
                 {
                     CartItems?.map((item)=>{
                         return (
-                            <li>{item.title}</li>
+                            <li className='abc'>
+                                {item.title}</li>
                         )
                     })
                 }

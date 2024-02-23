@@ -1,1 +1,14 @@
-
+.abc{
+    box-shadow: 5px 3px 10px;
+}
+#d1{
+    box-shadow: 5px 3px 10px;
+    background-color: rgb(244, 139, 155);
+}
+.myapp{
+    background-color: rgb(168, 98, 98);
+}
+#i1{
+    width:150px;
+    height:150px;
+}

@@ -5,7 +5,7 @@ import React from 'react'
 
 function App() {
   return (
-    <div className="mybox">
+    <div className='myapp'>
     <h1>Welcome to Reactapp</h1>
     <Products></Products>
     </div>
