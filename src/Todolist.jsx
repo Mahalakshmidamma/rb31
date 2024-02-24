@@ -5,11 +5,17 @@ function Todolist(){
     var [todos,setTodos]=React.useState(['play music','send off to praveen'])
     var [newtodo,setNewtodo]=React.useState('')
 
-    var del=React.useCallback(function del(i){
-     var temp=[...todos]
-     temp.splice(i,1)
-     setTodos([...temp])
-    },[])
+    // var del=React.useCallback(function del(i){
+    //  var temp=[...todos]
+    //  temp.splice(i,1)
+    //  setTodos([...temp])
+    // },[])
+
+    function del(ind){
+        var temp=[...todos]
+        temp.splice(ind,1)
+        setTodos([...temp])
+    }
    
 
     return (
@@ -20,7 +26,7 @@ function Todolist(){
             <ul>
                 {
                     todos?.map((todo,i)=>{
-                        return <Todo i={i} todo={todo} del={del}></Todo>
+                        return <Todo todo={todo} i={i} del={del}></Todo>
                     })
                 }
             </ul>

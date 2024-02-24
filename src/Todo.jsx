@@ -1,6 +1,6 @@
 import react from 'react'
 
-function Todo(todo,i,del){
+function Todo({todo,del,i}){
     return (
         <li>{todo}
        <button onClick={()=>{del(i)}}>Delete</button>
