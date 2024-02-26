@@ -1,11 +1,17 @@
 
   .mainbody{
     text-align: center;
-    border:2px solid;
-    border-radius: 25px;
     margin:20px;
     padding: 10px;
-    background-color: rgb(138, 131, 145);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 400p;
+    /* width: 200px; */
+    /* text-align: center; */
+    align-items: center;
   }
   .eachDiv{
     color: blue;
@@ -16,7 +22,13 @@
     justify-content: center;
   }
   
+  #divmain {
+    background-color: aqua;
+  }
 
-  
+  #root {
+    background-color: aqua;
 
-
+  }
+#hihi {
+}
