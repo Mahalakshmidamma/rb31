@@ -4,8 +4,8 @@ import { useFormik } from 'formik';
 
 function App() {
   var userForm=useFormik({
-    initialValues:{"fn":""},
-    onSubmit:()=>{}
+    initialValues:{"fn":"","ln":"","age":""},
+    onSubmit:(fv)=>{console.log(fv)}
   })
   return (
     <div className="App">
