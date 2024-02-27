@@ -20,6 +20,7 @@ function CountryDetails(){
               <h2>{countryDetails.capital[0]}</h2>
               <img src={countryDetails.flags.png}/>
             </div>
+
             }
             </div>
     )
