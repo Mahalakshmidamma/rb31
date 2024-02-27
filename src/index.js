@@ -8,6 +8,10 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Header from './Header'
+import Todolist from './Todolist';
+import Countries from './Countries';
+import CountryDetails from './CountryDetails';
 
 const router = createBrowserRouter([
   {
@@ -15,9 +19,27 @@ const router = createBrowserRouter([
     element: <App/>,
     children:[
       {
-        path:'/',
+        path:'counter',
         element:<Counter></Counter>
-      }
+      },
+      {
+        path:'header',
+        element:<Header></Header>
+      },
+      {
+        path:'todo',
+        element:<Todolist></Todolist>
+      },
+      {
+        path:'countries',
+        element:<Countries></Countries>,
+        children:[
+          {
+            path:'details/:cname',
+            element:<CountryDetails></CountryDetails>
+          }
+        ]
+      },
     ]
   },
 ]);
