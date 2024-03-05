@@ -1,12 +1,10 @@
-body{
-  background-color: rgb(161, 167, 167);
-}
+
 .App{
   display: flex; 
   justify-content: space-around;
-  margin-top: 5%;
-  background-color: rgb(241, 250, 250);
-  padding: 50px 20px 70px;
+  margin-top: 0%;
+  background-color: rgb(210, 224, 224);
+  padding: 50px 20px 207px;
 }
 h6,h1{
   color: blue;
@@ -23,17 +21,25 @@ h6,h1{
   font-size: 1.2rem; 
   border-radius: 8px; 
   padding: 8px 25px;
+  width: 12%;
   
 }
-button{
+#btn1{
   color:white;
   background-color: blue; 
-  font-size: 1.2rem; 
-  border-radius: 8px; 
-  padding: 8px 25px;
-
-  
+  font-size: 1.0rem; 
+  border-radius: 6px; 
+  padding: 8px 10px;
+  top:10px;
+  right:20px;
+  position: absolute; 
 }
+.div1{
+  position: absolute;
+  top: 53%;
+  right:60%;
+}
+
 
 
 
