@@ -1,9 +1,15 @@
 import React from "react";
 import { connect } from "react-redux";
+import { addTodo,deleteTodo } from "../store/actions";
 function Todolist(props){
     const [newtask,setNewtask]=React.useState('')
     function addTask(){
-        props.dispatch({type:"ADDTASK",payload:newtask})
+        // props.dispatch({type:"ADDTASK",payload:newtask})       // direct method
+        props.dispatch(addTodo(newtask))                         //by using separate 'action' file
+    }
+    function deleteTask(i){
+        // props.dispatch({type:"DELETETASK",payload:i})   
+        props.dispatch(deleteTodo(i))      
     }
     return(
      <div className="betterview">
@@ -13,7 +19,10 @@ function Todolist(props){
         {
         props.todolist.todos.map((t,i)=>{
           return (
-            <li key={i}>{t}</li>
+            <li key={i}>
+                {t}
+                <button onClick={()=>{deleteTask(i)}}>DELETE</button>
+                </li>
           )
         })
         }
