@@ -9,7 +9,9 @@ export function deleteTodo(index){
  }
 
  export function getCountries(){
-    fetch("https://restcountries.com/v2/all")
+    return (dispatch)=>{
+     fetch("https://restcountries.com/v2/all")
     .then(res=>res.json())
-    .then(countries=>{props.dispatch({type:'UPDATECOUNTRIES',payload:countries})})
+    .then(countries=>{dispatch( {type:'UPDATECOUNTRIES',payload:countries})})
+    }
  }
